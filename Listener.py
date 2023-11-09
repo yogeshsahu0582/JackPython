@@ -5,11 +5,11 @@ from Replier import *
 from tkinter import *
 r=sr.Recognizer()
 
-Mytext=""
-
 def Listen():
 
         global Mytext
+        MyText = ""
+        R = Label(text="Listening.....", width=50, height=2, font=30)
 
         try:
 
@@ -35,6 +35,7 @@ def Listen():
         except sr.UnknownValueError:
             print("unknown error occurred")
 
-        R = Label(text="Listening.....", width=50, height=2, font=30)
+
         R.config(text=MyText)
         R.pack()
+
